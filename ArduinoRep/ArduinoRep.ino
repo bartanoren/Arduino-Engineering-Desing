@@ -32,8 +32,8 @@ void loop() {
 
   printDistanceConsole(distanceCm1 , 1);
   printDistanceConsole(distanceCm2 , 2);
-  
-  delay(1000);
+  Serial.println("");
+  delay(2000);
 }
 
 long checkDuration(int trigPin, int echoPin){
@@ -50,8 +50,8 @@ int checkDistance(int duration){
 }
 
 void printDistanceConsole(int printVal, int sensorNr){
-  Serial.print("Distance of sensor" + String(sensorNr) + " : ");
+  Serial.print("Distance of sensor " + String(sensorNr) + " : ");
   Serial.print(printVal);
-  Serial.println(" cm");
+  Serial.print(" cm");
   Serial.println();
 }
